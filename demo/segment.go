@@ -55,10 +55,10 @@ func main() {
 	realTopic := &db.MsgTopic{
 		Name:            "RealData",
 		Root:            Root,
-		MaxSegmentIndex: 3,
-		MaxSegmentBytes: 1024,
+		MaxSegmentIndex: 6500,
+		MaxSegmentBytes: 1024 * 1024 * 128,
 		MarkerCallback: func(segmentIndex uint16) error {
-			//fmt.Printf("MarkerCallback:RealData,%d\n", segmentIndex)
+			fmt.Printf("MarkerCallback:RealData,%d\n", segmentIndex)
 			return nil
 		},
 	}

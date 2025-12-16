@@ -55,7 +55,7 @@ type MsgSegmentConf struct {
 	SegmentSuffix   string // 分段文件后缀
 	MaxSegmentBytes uint32 // 分段文件大小
 	MaxSegmentIndex uint16 // 最大分片数
-	MustSync        bool
+	MustSync        bool   // 强制同步
 }
 
 type MsgSegmentClearMarkerCallback func(segmentIndex uint16) error
